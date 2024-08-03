@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+body {
+  background-color: #061437;
+}
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.473);
+}
+.logo img {
+  height: 34px;
+}
+.list li {
+  width: 100px;
+}
+.navbar a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: "Agency FB";
+  font-weight: bold;
+}
+.navbar a:hover {
+  color: #ff0037;
+}
+.logo {
+  margin-right: 50px;
+}
+.list {
+  list-style: none;
+  gap: 25px;
+  display: flex;
+}
+#toggler,
+.navbar label {
+  display: none;
+}
+.member-group {
+  height: 540px;
+  width: 100%;
+  text-align: center;
+}
+.member-group h1 {
+  font-size: 35px;
+  color: #fff;
+}
+.member-info {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.member {
+  text-align: center;
+}
+.member .frame img {
+  height: 180px;
+  border-radius: 50%;
+}
+.member .info-text {
+  width: 400px;
+  height: 140px;
+  background-color: #fff;
+  border-radius: 46px;
+}
+.member .info-text p {
+  padding: 4px;
+  font-size: 18px;
+  font-family: "lucida Sans";
+}
+.member .info-text p::selection {
+  background-color: red;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar a {
+    color: #ffffff;
+  }
+  .navbar {
+    padding: 45px;
+  }
+  .menu {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background-color: #ffffff5a;
+  }
+  .menu li:hover {
+    background-color: #000000;
+    width: 100%;
+  }
+  .list {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+  .navbar label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .navbar label img {
+    height: 30px;
+  }
+  #toggler:checked ~ .menu {
+    max-height: 100%;
+  }
+  .member-group {
+    margin-top: 100px;
+  }
+  .member-group h1 {
+    font-size: 25px;
+  }
+  .member .frame img {
+    height: 90px;
+  }
+  .member .info-text {
+    height: 90px;
+    width: 100px;
+  }
+  .member .info-text p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .menu {
+    height: 190px;
+  }
+  .list li a {
+    font-size: 14px;
+  }
+  .member-group {
+    height: 300px;
+  }
+  .member .frame img {
+    height: 70px;
+  }
+  .member .info-text {
+    width: 250px;
+    height: 80px;
+  }
+  .member .info-text p {
+    font-size: 12px;
+  }
+}
